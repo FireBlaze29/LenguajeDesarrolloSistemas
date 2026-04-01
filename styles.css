@@ -1,19 +1,50 @@
-.pixelify {
-    font-family: "Pixelify Sans", sans-serif;
+.font-letra {
+    font-family: "Jersey 10", sans-serif;
     z-index: 0; /* Asegura que el texto esté por encima de la imagen */
 }
 
 .title {
     font-size: 3rem; /* Tamaño del texto */
-    color: white; /* Color del texto */
+    color: #F3E2BE; /* Color del texto */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.829); /* Sombra para mejorar la legibilidad */;
     position: absolute;
     right: 0; /* Pegado a la derecha */
     top: 40%; /* Posición vertical al 50% */
-    transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+    transform: translateY(-50%) !; /* Ajuste para centrar verticalmente */
     margin: 0;
+    padding-right: 40px;
+    font-size: 140px;
+}
+
+.sub-title{
+    color: #FAF7E4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.829);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding-right: 15vw;
+    font-size: 70px;
+}
+
+.b-central{
+    position: absolute;
+    top: 70%;
+    right: 25vw;
+    transform: translateY(-50%);
+}
+
+.b-comenzar {
+    background-color: #8b4343;
+    color: #F3E2BE; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.829); /* Sombra para mejorar la legibilidad */;
+    border-radius: 15px;
+    font-size: 55px;
     padding-right: 30px;
-    font-size: 80px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    border: 0;
 }
 
 * {
@@ -45,7 +76,18 @@ body {
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px){
+    .b-central{
+        right: 10vw;
+    }
+
+    .sub-title{
+        color: transparent;
+        text-shadow: none;
+    }
+}
+
+@media (max-width: 1500px) {
     .title {
         top: 20%;
     }
