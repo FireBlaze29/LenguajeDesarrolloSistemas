@@ -1,0 +1,12 @@
+.encabezado {
+    font-family: "Jersey 10", sans-serif;
+    z-index: 0; /* Asegura que el texto esté por encima de la imagen */
+    background-color: #6F4E37;
+    text-align: center;
+}
+
+.encabezado a{
+    color: #F5E6D3;
+    text-decoration-line: none;
+    font-size: 60px;
+}

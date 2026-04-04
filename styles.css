@@ -9,7 +9,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.829); /* Sombra para mejorar la legibilidad */;
     position: absolute;
     right: 0; /* Pegado a la derecha */
-    top: 40%; /* Posición vertical al 50% */
+    top: 25%; /* Posición vertical al 50% */
     transform: translateY(-50%) !; /* Ajuste para centrar verticalmente */
     margin: 0;
     padding-right: 40px;
@@ -69,6 +69,13 @@ body {
     z-index: -1; /* Asegura que la imagen esté detrás de otros elementos */
 }
 
+@media (max-width: 675px) {
+    .title {
+        padding-left: 0;
+        font-size: 20vw;
+    }
+}
+
 @media (max-width: 750px) {
     .fullscreen-image {
         width: 750px;
@@ -79,16 +86,31 @@ body {
 @media (max-width: 1000px){
     .b-central{
         right: 10vw;
+        top: 70% !important;
     }
 
     .sub-title{
         color: transparent;
         text-shadow: none;
     }
+
+    .title {
+        padding-right: 15px;
+        padding-left: 10vw;
+        text-align: right;
+    }
 }
 
 @media (max-width: 1500px) {
     .title {
-        top: 20%;
+        top: 10%;
+    }
+
+    .sub-title{
+        top: 35%;
+    }
+
+    .b-central{
+        top: 60%;
     }
 }
