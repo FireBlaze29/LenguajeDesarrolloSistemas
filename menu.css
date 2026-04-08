@@ -1,12 +1,135 @@
-.encabezado {
-    font-family: "Jersey 10", sans-serif;
-    z-index: 0; /* Asegura que el texto esté por encima de la imagen */
-    background-color: #6F4E37;
-    text-align: center;
+body {
+  background-color: #4B2E2B !important;
 }
 
-.encabezado a{
+.pixel-font {
+    font-family: "Jersey 10", sans-serif;
+}
+
+.pixel-img{
+    image-rendering: crisp-edges;    /* Firefox */
+    image-rendering: pixelated;      /* Chrome, Edge, Safari */
+    image-rendering: crisp-edges;    /* Fallback */
+    image-rendering: pixelated;      /* Estándar moderno */
+    
+    /* Opcional: evita que el navegador escale mal la imagen */
+    transform: scale(1); /* Fuerza un nuevo contexto de renderizado */
+}
+
+.text-tabla {
+    color: #EBD5B3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.829);
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20px;
+}
+
+.linkeable {
+    text-decoration: none;
+}
+
+.encabezado {
+    background-color: #6F4E37;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.encabezado h1{
     color: #F5E6D3;
     text-decoration-line: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.829);
     font-size: 60px;
+    padding-right: 5px;
+}
+
+.encabezado img {
+    width: 64px;
+    height: 64px;
+}
+
+.central-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.circle {
+    width: 100px;   /* Diámetro = 2 * radio */
+    height: 100px;  /* Diámetro = 2 * radio */
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: absolute;
+    margin-left: -5vw;
+    margin-top: 10px;
+}
+
+.circle-carrito {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 3px dashed #222034;
+    background-color: rgb(196, 196, 196);
+    position: fixed;
+    right: 1vw;
+    bottom: 1vw;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.general-container {
+    display: flex;
+    justify-content: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+    white-space: nowrap;
+    margin-bottom: 25px;
+}
+
+.general-container > * {
+    flex-shrink: 0;
+}
+
+.img-circle {
+    width: 100px;   /* Ancho = 2 * radio (radio = 100px) */
+    height: auto;
+    object-fit: cover;
+    filter: blur(0);
+}
+
+.container-text {
+    position: relative;
+    background-color: #EBD5B3;
+    width: 60vw;
+    border-radius: 20px 0px 20px;
+    padding-left: 60px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container-price {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.svg-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.add-button {
+    background-color: transparent;
+    border-color: transparent;
 }
