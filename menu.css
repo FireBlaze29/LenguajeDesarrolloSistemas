@@ -86,6 +86,25 @@ body {
     z-index: 2;
 }
 
+.carrito-contador {
+    font-size: 40px;
+    background-color: red;
+    border-radius: 20px;
+    position: fixed;
+    right: 5vw;
+    bottom: 4vw;
+    overflow: hidden;
+    z-index: 3;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.carrito-general {
+    display: flex;
+}
+
 .general-container {
     display: flex;
     justify-content: nowrap;

@@ -1,15 +1,16 @@
 let NormalMenu = [
-    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00" },
-    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00" },
-    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00" },
-    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00" },
+    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00", id: "cafe001"},
+    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00", id: "cafe002"},
+    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00", id: "cafe003"},
+    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00", id: "cafe004"}
 ];
 
 let EspecialesMenu = [
-    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00" },
-    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00" },
+    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00", id: "cafe101"},
+    { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00", id: "cafe102"}
 ];
 
+let IdList = [];
 
 let MenuReference = document.getElementById("n-menu");
 let MenuEspeciales = document.getElementById("e-menu");
@@ -29,7 +30,7 @@ for (let data of NormalMenu) {
                         ${data.descripcion}
                     </h4>
                 </div>
-                <div class="container-price">
+                <div class="container-price" id=${data.id}>
                     <h4>
                         ${data.precio}
                     </h4>
@@ -44,6 +45,8 @@ for (let data of NormalMenu) {
         </div>`;
     
     TextMenu += TextHtml;
+
+    IdList.push(data.id)
 }
 
 for (let data of EspecialesMenu) {
@@ -58,7 +61,7 @@ for (let data of EspecialesMenu) {
                         ${data.descripcion}
                     </h4>
                 </div>
-                <div class="container-price">
+                <div class="container-price" id=${data.id}>
                     <h4>
                         ${data.precio}
                     </h4>
@@ -73,14 +76,26 @@ for (let data of EspecialesMenu) {
         </div>`;
     
     TextEspe += TextHtml;
+
+    IdList.push(data.id)
 }
 
 MenuReference.innerHTML = TextMenu;
 MenuEspeciales.innerHTML = TextEspe;
+
+let Ncarrito = document.getElementById("n-carrito");
 
 let contador = 0;
 
 function buttons() {
     contador++;
     console.log(contador);
+
+    TextHtml =`
+        <h3 class="carrito-contador pixel-font">${contador}</h3>
+        <div class="circle-carrito">
+            <img src="img/obj2.png" class="pixel-img img-circle">
+        </div>`;
+
+    Ncarrito.innerHTML = TextHtml;
 }
