@@ -118,10 +118,22 @@ function buttons(boton) {
     TextHtml =`
         <h3 class="carrito-contador pixel-font">${contador}</h3>
         <div class="circle-carrito">
-            <img src="img/obj2.png" class="pixel-img img-circle">
+            <a href="comprar.html">
+                <img src="img/obj2.png" class="pixel-img img-circle">
+            </a>
         </div>`;
 
     Ncarrito.innerHTML = TextHtml;
+
+    let contenedor = boton.parentElement;
+    let NBoton = contenedor.children[1];
+
+    let reference2 = document.getElementById(NBoton.id);
+
+    if (contador > 0) {
+        TextHtml2 =`<img src="https://www.svgrepo.com/show/522962/minus-square.svg" class="svg-icon">`
+        reference2.innerHTML = TextHtml2;
+    }
 
     console.log(IdList)
 }
@@ -132,12 +144,62 @@ function quitButtons(boton) {
 
     let reference = document.getElementById(boton.id);
 
-    if (contador > 0) {
+    let contenedor = boton.parentElement;
+    let NBoton = contenedor.children[2];
+
+    let reference2 = document.getElementById(NBoton.id);
+
+    let cantidad = IdList[`${NBoton.id}`];
+    cantidad--;
+    IdList[`${NBoton.id}`] = cantidad
+
+    TextHtmlcart =`
+        <h3 class="carrito-contador pixel-font">${contador}</h3>
+        <div class="circle-carrito">
+            <a href="comprar.html">
+                <img src="img/obj2.png" class="pixel-img img-circle">
+            </a>
+        </div>`;
+
+    Ncarrito.innerHTML = TextHtmlcart;
+
+    let TextHtmlNboton = ``;
+
+    if (cantidad > 0) {
+
         console.log(contador)
         TextHtml =`<img src="https://www.svgrepo.com/show/522962/minus-square.svg" class="svg-icon">`
         reference.innerHTML = TextHtml;
-    }else{
+
+        TextHtmlcart =`
+            <h3 class="carrito-contador pixel-font">${contador}</h3>
+            <div class="circle-carrito">
+                <a href="comprar.html">
+                    <img src="img/obj2.png" class="pixel-img img-circle">
+                </a>
+            </div>`;
+        Ncarrito.innerHTML = TextHtmlcart;
+
+        TextHtmlNboton =`
+            <p>${cantidad}</p>
+            <img src="https://www.svgrepo.com/show/423634/add-square.svg" class="svg-icon">`
+
+    }else {
         TextHtml =``;
         reference.innerHTML = TextHtml;
+
+        TextHtmlNboton =`
+            <img src="https://www.svgrepo.com/show/423634/add-square.svg" class="svg-icon">`
+    } 
+    
+    if (contador < 1){
+
+        TextHtmlcart =`
+            <div class="circle-carrito">
+                <img src="img/obj2.png" class="pixel-img img-circle">
+            </div>`;
+        Ncarrito.innerHTML = TextHtmlcart;
     }
+
+    reference2.innerHTML = TextHtmlNboton;
 }

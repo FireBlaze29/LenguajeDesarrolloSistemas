@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #4B2E2B !important;
+}
+
+.pixel-font {
+    font-family: "Jersey 10", sans-serif;
+}
+
+.pixel-img{
+    image-rendering: crisp-edges;    /* Firefox */
+    image-rendering: pixelated;      /* Chrome, Edge, Safari */
+    image-rendering: crisp-edges;    /* Fallback */
+    image-rendering: pixelated;      /* Estándar moderno */
+    
+    /* Opcional: evita que el navegador escale mal la imagen */
+    transform: scale(1); /* Fuerza un nuevo contexto de renderizado */
+}
+
+.linkeable {
+    text-decoration: none;
+}
+
+.encabezado {
+    background-color: #6F4E37;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.encabezado h1{
+    color: #F5E6D3;
+    text-decoration-line: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.829);
+    font-size: 60px;
+    padding-right: 5px;
+}
+
+.encabezado img {
+    width: 64px;
+    height: 64px;
+}
