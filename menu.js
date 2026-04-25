@@ -1,3 +1,5 @@
+let allPag = document.getElementById("all-pag");
+
 let NormalMenu = [
     { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00", id: "cafe001", btn: "btn001", btnn: "btnn001"},
     { imagen: "img/obj1.png", titulo: "Nombre del Cafe", descripcion: "Descripcion del cafe", precio: "$10.00", id: "cafe002", btn: "btn002", btnn: "btnn002"},
@@ -118,9 +120,9 @@ function buttons(boton) {
     TextHtml =`
         <h3 class="carrito-contador pixel-font">${contador}</h3>
         <div class="circle-carrito">
-            <a href="comprar.html">
+            <button onclick="comprar()">
                 <img src="img/obj2.png" class="pixel-img img-circle">
-            </a>
+            </button>
         </div>`;
 
     Ncarrito.innerHTML = TextHtml;
@@ -156,9 +158,9 @@ function quitButtons(boton) {
     TextHtmlcart =`
         <h3 class="carrito-contador pixel-font">${contador}</h3>
         <div class="circle-carrito">
-            <a href="comprar.html">
+            <button onclick="comprar()">
                 <img src="img/obj2.png" class="pixel-img img-circle">
-            </a>
+            </button>
         </div>`;
 
     Ncarrito.innerHTML = TextHtmlcart;
@@ -174,9 +176,9 @@ function quitButtons(boton) {
         TextHtmlcart =`
             <h3 class="carrito-contador pixel-font">${contador}</h3>
             <div class="circle-carrito">
-                <a href="comprar.html">
+                <button onclick="comprar()">
                     <img src="img/obj2.png" class="pixel-img img-circle">
-                </a>
+                </button>
             </div>`;
         Ncarrito.innerHTML = TextHtmlcart;
 
@@ -202,4 +204,12 @@ function quitButtons(boton) {
     }
 
     reference2.innerHTML = TextHtmlNboton;
+}
+
+function comprar(){
+
+    TextHtml = ``;
+
+    allPag.innerHTML = TextHtml
+
 }
