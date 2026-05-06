@@ -1,0 +1,69 @@
+
+body{
+    margin: auto;
+    width: 960px;
+    height: 800px;
+    background-color: #a36c6c;
+}
+
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+}
+
+.Cuadrado{
+
+    width: 80%;
+    background-color: #d69b7c/* Color de fondo */;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 93vh;
+
+}
+
+.Tituloi {
+
+    display: center;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 150px;
+    text-align: center;
+}
+
+.conteiner1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteiner1 img {
+    height: 10vw;
+    width: auto;
+}
+
+.conteiner2 {
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner2 p{
+    font-size: 6vw;
+}
+
+.conteiner3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteiner3 button {
+    background-color: #a36c6c;
+    border-color: transparent;
+    font-size: 2vw;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
