@@ -1,0 +1,95 @@
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/Fondo2.png');
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: top center;
+    z-index: -1;
+}
+
+.pixel-font {
+  font-family: "Jersey 10", sans-serif;
+}
+
+
+/* 2. Centramos tus cuadros para que no pisen las imágenes laterales */
+.cuadro-marron, .zona-beige {
+    max-width: 86%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuadro Marrón: Mitad de arriba */
+.cuadro-marron {
+    width: 100%;
+    height: 50vh;
+    background-color: #a36c6c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cuadro-marron h1{
+    font-size: 6vw;
+    text-align: center;
+}
+
+.cuadro-marron img{
+    width: 15vw;
+    height: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+/* Zona Beige: Mitad de abajo */
+.zona-beige {
+    width: 100%;
+    height: 50vh;
+    background-color: #F5F5DC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+}
+
+.fila-doble {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo de los botones */
+.btn {
+    background-color: #5b1a12;
+    border: 1px solid #d69b7c;
+    font-size: 2vw;
+    width: 20vw;
+    height: 7vw;
+    cursor: pointer;
+    border-radius: 12px;
+    color: white; /*color de la letra del boton de codigo de rastreo*/
+}
+
+.btn.especial {
+    background-color: #d69b7c; /* Fondo Beige */
+    color: #5b1a12;           /* Texto Marrón */
+    border: 2px solid#d5885f ; /* Borde para que se vea sobre el fondo beige */
+}
+
+    /* ... aquí termina el código de tus botones ... */
+

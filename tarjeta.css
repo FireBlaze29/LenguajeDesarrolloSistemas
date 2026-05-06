@@ -1,0 +1,118 @@
+.pixel-font {
+    font-family: "Jersey 10", sans-serif;
+}
+
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/Fondo2.png');
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: top center;
+    z-index: -1;
+}
+
+.rectangulo-fondo {
+    background-color: #f3e2be;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-53%);
+    margin: 40px;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80vh;
+}
+
+.secciones{
+    display: flex;
+    justify-content: space-around;
+}
+
+.seccion1 li,
+.seccion2 li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1vw;
+}
+
+.seccion1 h3,
+.seccion2 h3{
+    font-size: 1.2vw;
+    background-color: #d69b7c;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 0.7vw;
+    padding-top: 0.7vw;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.seccion1 input,
+.seccion2 input{
+    background-color: #d69b7c;
+    font-size: 1.2vw;
+    border-color: transparent;
+    height: 2.2vw;
+    width: 100%;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.seccion1 footer,
+.seccion2 footer{
+    background-color: #d69b7c;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2vw;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button {
+    font-size: 2vw;
+    background-color: #a36c6c;
+    border-color: transparent;
+}
+
+.terminos {
+    font-size: 1vw;
+}
+
+.terminos input {
+    width: 1vw;
+    height: auto;
+}
+
+.seccion2 li {
+    background-color: #d69b7c;
+    margin-bottom: 0.7vw;
+    font-size: 2.2vw;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.seccion2 img {
+    width: 6vw;
+    height: auto;
+}

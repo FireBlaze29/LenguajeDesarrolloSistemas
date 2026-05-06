@@ -249,7 +249,7 @@ class coffes {
                 </div>
                 <div class="cash-buttons">
                     <button id="button-volver">VOLVER</button>
-                    <button>COMPRAR</button>
+                    <a href="tarjeta.html"><button>COMPRAR</button></a>
                 </div>
             </div>
         </div>`;
